@@ -36,4 +36,31 @@ A simple and user-friendly Todo List application that allows users to manage the
    ```bash
    Update-Database
 
+## Screenshots
+
+### Homepage
+This is the homepage of the Todo List application where users can view their tasks.
+
+![Homepage](screenshots/homepage.png)
+
+### Edit Page
+The edit page allows users to modify their existing tasks.
+
+![Edit Page](screenshots/editpage.png)
+
+### Login Page
+The login page requires users to authenticate with their credentials.
+
+![Login Page](screenshots/loginpage.png)
+
+### Register Page
+The register page allows new users to sign up.
+
+![Register Page](screenshots/registerpage.png)
+
+### Add Task Page
+Users can add a new task through this page.
+
+![Add Task Page](screenshots/addtaskpage.png)
+
 
