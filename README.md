@@ -7,11 +7,10 @@ A simple and user-friendly Todo List application that allows users to manage the
 - User authentication and authorization
 - Add, edit, and delete tasks
 - Mark tasks as complete
-- Filter tasks based on status (completed/incomplete)
 - Responsive design for mobile and desktop users
 
 ## Technologies Used
-- **Front-end:** HTML, CSS, JavaScript
+- **Front-end:** HTML, CSS, Bootstrape
 - **Back-end:** ASP.NET MVC
 - **Database:** SQL Server
 - **Version Control:** Git and GitHub
