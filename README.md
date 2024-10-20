@@ -8,6 +8,7 @@ A simple and user-friendly Todo List application that allows users to manage the
 - Add, edit, and delete tasks
 - Mark tasks as complete
 - Responsive design for mobile and desktop users
+- Exception Handling
 
 ## Technologies Used
 - **Front-end:** HTML, CSS, Bootstrape
