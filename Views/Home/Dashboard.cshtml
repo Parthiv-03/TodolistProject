@@ -1,0 +1,137 @@
+﻿@model TodolistProject.Models.User
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+@{
+    ViewData["Title"] = "Dashboard";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"]</title>
+
+    <!-- Reference Bootstrap CSS from wwwroot -->
+    <link href="~/lib/twitter-bootstrap/css/bootstrap.css" rel="stylesheet" />
+
+    <style>
+        .btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
+            color: white; /* Ensure text is white and visible */
+            padding: 10px 20px; /* Increase padding for better visibility */
+            font-size: 1.1em; /* Make the font size slightly larger */
+        }
+
+            .btn-primary:hover {
+                background-color: #0056b3;
+                border-color: #004085;
+            }
+
+        .table {
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+            .table th, .table td {
+                text-align: center;
+                vertical-align: middle;
+            }
+
+        .no-todo {
+            text-align: center;
+            color: gray;
+            font-size: 1.2em;
+            padding: 20px;
+        }
+
+        .nav {
+            margin-bottom: 20px;
+        }
+
+            .nav .nav-link {
+                padding: 10px 20px; /* Ensure button padding for text visibility */
+                font-size: 1.1em;
+                color: white; /* Make sure text remains visible on the button */
+            }
+
+        /* New CSS for Logout Button */
+        .btn-logout {
+            background-color: #dc3545;
+            border-color: #dc3545;
+            padding: 10px 20px;
+            font-size: 1.1em;
+        }
+
+            .btn-logout:hover {
+                background-color: #c82333;
+                border-color: #bd2130;
+            }
+
+        /* Add margin to separate the buttons */
+        .nav .nav-item:not(:last-child) {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <h2 class="text-center mb-4">Hello, @Model.Username! Here’s your Personalized To-Do List  </h2>
+
+        <nav>
+            <ul class="nav justify-content-center">
+                <li class="nav-item">
+                    <a class="nav-link btn btn-primary" asp-action="AddTask" asp-controller="Task">Add Task</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link btn btn-logout" asp-action="LogOut" asp-controller="Home">Log Out</a>
+                </li>
+            </ul>
+        </nav>
+
+        <table class="table table-striped table-hover mt-3">
+            <thead class="thead-dark">
+                <tr>
+                    <th>Task Title</th>
+                    <th>Description</th>
+                    <th>Due Date</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                @if (Model.ToDoLists != null && Model.ToDoLists.Any())
+                {
+                    foreach (var todo in Model.ToDoLists)
+                    {
+                        <tr>
+                            <td>@todo.Title</td>
+                            <td>@todo.Description</td>
+                            <td>@todo.DueDate.ToShortDateString()</td>
+                            <td>@(todo.IsCompleted ? "Completed" : "Pending")</td>
+                            <td>
+                                <a asp-action="EditTask" asp-controller="Task" asp-route-id="@todo.Id" class="btn btn-info btn-sm">Update</a>
+                            </td>
+                        </tr>
+                    }
+                }
+                else
+                {
+                    <tr>
+                        <td colspan="5" class="no-todo">No To-Do Lists found.</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Reference Bootstrap JS and dependencies from wwwroot -->
+    <script src="~/lib/jquery/jquery.js"></script>
+    <script src="~/lib/jquery-validate/jquery.validate.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
+    <script src="~/lib/twitter-bootstrap/js/bootstrap.js"></script>
+    <script src="~/lib/twitter-bootstrap/js/bootstrap.js"></script>
+</body>
+</html>

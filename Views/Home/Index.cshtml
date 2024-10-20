@@ -1,0 +1,92 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+@{
+    ViewData["Title"] = "Login";
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+
+    <!-- Reference to Bootstrap CSS -->
+    <link href="~/lib/twitter-bootstrap/css/bootstrap.css" rel="stylesheet" />
+
+    <!-- Reference to jQuery and Bootstrap JS -->
+    <script src="~/lib/jquery/jquery.js"></script>
+    <script src="~/lib/jquery-validate/jquery.validate.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
+    <script src="~/lib/twitter-bootstrap/js/bootstrap.js"></script>
+
+    <style>
+        body {
+            background-color: #f8f9fa; /* Light background color */
+        }
+
+        .card {
+            border: 1px solid #007bff; /* Blue border */
+            border-radius: 10px; /* Rounded corners */
+        }
+
+        .card-header {
+            background-color: #007bff; /* Blue header */
+            color: white; /* White text */
+        }
+
+        .form-control {
+            margin-bottom: 15px; /* Increased space between fields */
+        }
+
+        .btn-primary {
+            background-color: #007bff; /* Blue button */
+            border-color: #007bff; /* Blue border */
+        }
+
+            .btn-primary:hover {
+                background-color: #0056b3; /* Darker blue on hover */
+                border-color: #004085; /* Darker border on hover */
+            }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header text-center">
+                        <h2>Login</h2>
+                    </div>
+                    <div class="card-body">
+                        <form method="post" asp-action="Login">
+                            <div class="form-group">
+                                <label for="username">Username</label>
+                                <input type="text" class="form-control" id="username" name="username" required placeholder="Enter username">
+                            </div>
+                            <div class="form-group">
+                                <label for="password">Password</label>
+                                <input type="password" class="form-control" id="password" name="password" required placeholder="Enter password">
+                            </div>
+                            <div class="text-center">
+                                <!-- Centering the button -->
+                                <button type="submit" class="btn btn-primary btn-block">Login</button>
+                            </div>
+
+                            @if (ViewBag.ErrorMessage != null)
+
+                            {
+                                <div class="alert alert-danger mt-3" role="alert">
+                                    @ViewBag.ErrorMessage
+                                </div>
+                            }
+                        </form>
+                    </div>
+                    <div class="card-footer text-center">
+                        <p>Don't have an account? <a asp-action="Register">Register here</a>.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
