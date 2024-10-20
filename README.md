@@ -1,4 +1,4 @@
-# QuickNote - Todo List 
+# QuickNote (Todo List)
 
 ## Description
 A simple and user-friendly Todo List application that allows users to manage their tasks effectively. Users can add, edit, delete, and mark tasks as complete. The application is built using ASP.NET MVC and follows best practices for web development.
