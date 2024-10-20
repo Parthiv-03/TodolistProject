@@ -66,7 +66,7 @@ The edit page allows users to modify their existing tasks.
 ![Edit Page](screenshots/EditPage.png)
 
 ### Error Page
-When users use incorrect url then this error comes.
+Detailed error pages are enabled during development to aid debugging, while in production, a custom error page ensures user-friendly messaging.
 
 ![Error Page](screenshots/ErrorPage.png)
 
