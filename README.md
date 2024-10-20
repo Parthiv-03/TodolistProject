@@ -26,10 +26,9 @@ A simple and user-friendly Todo List application that allows users to manage the
 1. Clone the repository:
    ```bash
    git clone https://github.com/Parthiv-03/TodolistProject.git
--2. Update the connection string:
--   "ConnectionStrings": {
-- "DefaultConnection": "Server=YOUR_SERVER;Database=YOUR_DATABASE;User Id=YOUR_USERNAME;Password=YOUR_PASSWORD;"
--}
+- 2. Update the connection string:
+   "ConnectionStrings": {
+   "DefaultConnection": "Server=YOUR_SERVER;Database=YOUR_DATABASE;User Id=YOUR_USERNAME;Password=YOUR_PASSWORD;"}
 -3.Install Entity Framework Core Tools:
 -   Install-Package Microsoft.EntityFrameworkCore.Tools
 -4.Run database migrations:
