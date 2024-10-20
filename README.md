@@ -39,33 +39,34 @@ A simple and user-friendly Todo List application that allows users to manage the
 
 ## Screenshots
 
-### Homepage
-This is the homepage of the Todo List application where users can view their tasks.
-
-![Homepage](screenshots/HomePage.png)
-
-### Edit Page
-The edit page allows users to modify their existing tasks.
-
-![Edit Page](screenshots/EditPage.png)
-
-### Login Page
-The login page requires users to authenticate with their credentials.
-
-![Login Page](screenshots/LoginPage.png)
 
 ### Register Page
 The register page allows new users to sign up.
 
 ![Register Page](screenshots/RegisterPage.png)
 
+### Login Page
+The login page requires users to authenticate with their credentials.
+
+![Login Page](screenshots/LoginPage.png)
+
+### Homepage
+This is the homepage of the Todo List application where users can view their tasks.
+
+![Homepage](screenshots/HomePage.png)
+
 ### Add Task Page
 Users can add a new task through this page.
 
 ![Add Task Page](screenshots/AddTask.png)
 
+### Edit Page
+The edit page allows users to modify their existing tasks.
+
+![Edit Page](screenshots/EditPage.png)
+
 ### Error Page
-Users use incoorect url this error comes.
+Users use incorrect url this error comes.
 
 ![Error Page](screenshots/ErrorPage.png)
 
