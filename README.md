@@ -61,6 +61,11 @@ The register page allows new users to sign up.
 ### Add Task Page
 Users can add a new task through this page.
 
-![Add Task Page](screenshots/AddtaskPage.png)
+![Add Task Page](screenshots/AddTask.png)
+
+### Error Page
+Users use incoorect url this error comes.
+
+![Error Page](screenshots/ErrorPage.png)
 
 
