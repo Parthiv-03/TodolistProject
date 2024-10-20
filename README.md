@@ -27,10 +27,12 @@ A simple and user-friendly Todo List application that allows users to manage the
    ```bash
    git clone https://github.com/Parthiv-03/TodolistProject.git
 2. Update Connection String:
+   ```bash
    "ConnectionStrings": {"DefaultConnection": "Server=YOUR_SERVER;Database=YOUR_DATABASE;User Id=YOUR_USERNAME;Password=YOUR_PASSWORD;"}
-3. Install Entity Framework Core Tools:
+4. Install Entity Framework Core Tools:
+   ```bash
    Install-Package Microsoft.EntityFrameworkCore.Tools
-4. Run Database Migrations
+6. Run Database Migrations
    ```bash
    Update-Database
 
