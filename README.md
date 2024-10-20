@@ -37,4 +37,3 @@ A simple and user-friendly Todo List application that allows users to manage the
    Update-Database
 
 
-
