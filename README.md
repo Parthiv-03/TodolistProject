@@ -66,7 +66,7 @@ The edit page allows users to modify their existing tasks.
 ![Edit Page](screenshots/EditPage.png)
 
 ### Error Page
-Users use incorrect url this error comes.
+When users use incorrect url then this error comes.
 
 ![Error Page](screenshots/ErrorPage.png)
 
